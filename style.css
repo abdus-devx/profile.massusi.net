@@ -48,6 +48,27 @@ text-decoration:none;
 color:#333;
 font-weight:500;
 }
+/* =========================
+   LOGO
+========================= */
+
+.navq-logo{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  flex-shrink:0;
+}
+
+.navq-logo img{
+  height:62px;
+  width:auto;
+  object-fit:contain;
+  transition: transform 0.3s ease;
+}
+
+.navq-logo:hover img{
+  transform:scale(1.03);
+}
 
 .hero{
 padding:140px 0 80px;
@@ -101,12 +122,24 @@ border-radius:999px;
 text-decoration:none;
 }
 
+.btn-primary:hover{
+border: 1px solid #46e1b4;
+background: linear-gradient(180deg, #ffffff 0%,#beffec 100%);
+color:var(--primary);
+}
+
 .btn-outline{
-border:2px solid var(--primary);
+border: 1px solid #46e1b4;
+background: linear-gradient(180deg, #ffffff 0%,#beffec 100%);
 color:var(--primary);
 padding:15px 30px;
 border-radius:999px;
 text-decoration:none;
+transition: transform 0.3s ease;
+}
+
+.btn-outline:hover{
+    transform: scale(0.9);
 }
 
 .section{
@@ -239,4 +272,7 @@ nav{
 display:none;
 }
 
+.nav{
+    justify-content: center;
+}
 }
