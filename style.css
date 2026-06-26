@@ -284,10 +284,14 @@ nav a:hover {
 }
 
 .feature {
-
     padding: 25px;
     border-radius: 20px;
-
+    transition: .3s;
+}
+.feature:hover{
+    transform: translateY(-3px);
+    box-shadow:
+        0 20px 45px rgba(29, 78, 216, .35);
 }
 
 
