@@ -555,22 +555,81 @@ nav a:hover {
     padding: 20px;
 }
 
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+.accordion{
+    max-width:900px;
+    margin:60px auto 0;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
 }
 
-.why-card {
-    padding: 30px;
-    border-radius: 25px;
+.accordion-item{
+    background:#fff;
+    border:1px solid #edf2f7;
+    border-radius:22px;
+    overflow:hidden;
+    transition:.35s ease;
+    box-shadow:0 10px 30px rgba(15,23,42,.05);
+}
 
+.accordion-item:hover{
+    transform:translateY(-2px);
+    box-shadow:0 18px 45px rgba(15,23,42,.08);
+}
 
+.accordion-header{
+    width:100%;
+    border:none;
+    background:none;
+    padding:24px 28px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+}
+
+.accordion-title{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    font-size:1.1rem;
+    font-weight:600;
+    color:#0f172a;
+}
+
+.accordion-title svg{
+    width:22px;
+    height:22px;
+    color:var(--primary);
+}
+
+.accordion-icon{
+    transition:.35s;
+    color:var(--primary);
+}
+
+.accordion-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .45s ease;
+}
+
+.accordion-content p{
+    padding:0 28px 24px;
+    line-height:1.8;
+    color:#64748b;
+}
+
+.accordion-item.active .accordion-content{
+    max-height:220px;
+}
+
+.accordion-item.active .accordion-icon{
+    transform:rotate(45deg);
 }
 
 .feature,
-.product-card,
-.why-card {
+.product-card {
     background: #fff;
     box-shadow:
         0 10px 40px rgba(15, 23, 42, .06);
