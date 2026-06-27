@@ -175,24 +175,8 @@ nav a:hover {
     justify-content: center;
     align-items: center;
 }
-.floating::before{
-    content:"";
-    position:absolute;
-    width:500px;
-    height:500px;
-    border:2px solid rgba(59,130,246,.15);
-    border-radius:50%;
-    animation: rotate 20s linear infinite;
-}
 
-@keyframes rotate{
-    from{
-        transform:rotate(0deg);
-    }
-    to{
-        transform:rotate(360deg);
-    }
-}
+
 .hero-image>img {
     width: 100%;
     max-width: 620px;
@@ -238,11 +222,15 @@ nav a:hover {
 
 .floating img {
     width: 65%;
-    
+    width:58%;
+    height:auto;
+    object-fit:contain;
 }
+
 .floating-halal {
     top: 10%;
     left: 8%;
+    padding: 50px 0;
 }
 .floating-bpom {
     bottom: 15%;
@@ -254,6 +242,9 @@ nav a:hover {
 
     0%,100%{
         transform:translateY(0);
+    }
+    25% {
+        transform: translateX(30px);
     }
 
     50%{
