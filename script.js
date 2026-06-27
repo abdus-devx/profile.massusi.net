@@ -1,3 +1,4 @@
+
 document.querySelectorAll('a[href^="#"]').forEach(link => {
 
 link.addEventListener('click', e => {
@@ -21,3 +22,5 @@ const header = document.querySelector('.header');
 window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 40);
 });
+
+lucide.createIcons();
