@@ -169,9 +169,109 @@ nav a:hover {
     -webkit-text-fill-color: transparent;
 }
 
-.hero-image img {
+.hero-image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.floating::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border:2px solid rgba(59,130,246,.15);
+    border-radius:50%;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+.hero-image>img {
     width: 100%;
-    border-radius: 30px;
+    max-width: 620px;
+    animation: float 6s ease-in-out infinite;
+}
+.floating {
+    position: absolute;
+
+    width: 90px;
+    height: 90px;
+
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+
+    border-radius: 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.08);
+
+    animation: floatIcon 4s ease-in-out infinite;
+}
+.floating::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-12px;
+
+    border-radius:30px;
+
+    background:radial-gradient(
+        rgba(59,130,246,.15),
+        transparent 70%
+    );
+
+    z-index:-1;
+}
+
+.floating img {
+    width: 65%;
+    
+}
+.floating-halal {
+    top: 10%;
+    left: 8%;
+}
+.floating-bpom {
+    bottom: 15%;
+    right: 3%;
+
+    animation-delay: 2s;
+}
+@keyframes floatIcon{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+}
+
+@keyframes floatProduct{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
 }
 
 .badge {
