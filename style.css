@@ -311,7 +311,6 @@ nav a:hover {
     text-decoration: none;
     transition: transform 0.3s ease;
 }
-
 .btn-outline:hover {
     transform: scale(0.9);
 }
@@ -551,8 +550,21 @@ nav a:hover {
     display: block;
 }
 
-.product-card h4 {
-    padding: 20px;
+.prd-title {
+    border: 1px solid var(--border);
+    color: var(--primary);
+    border-radius: 999px;
+    padding: 6px 8px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    width: 70%;
+    margin: 0 auto 10px;
+    background: none;
+    transition: 0.3s ease;
+}
+.prd-title:hover {
+    border: 1px solid var(--primary-light);
 }
 
 .accordion{
