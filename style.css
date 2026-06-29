@@ -665,6 +665,22 @@ nav a:hover {
     .hero {
         text-align: center;
     }
+    .header.scrolled {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255,255,255,.75);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        box-shadow:
+            0 10px 30px rgba(15,23,42,.12),
+            inset 0 1px 0 rgba(255,255,255,.8);
+    }
 
     .hero-btns {
         justify-content: center;
