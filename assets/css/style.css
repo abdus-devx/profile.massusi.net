@@ -302,6 +302,7 @@ nav a:hover {
 
 .section-title {
     margin-bottom: 60px;
+    margin-top: 20px;
 }
 
 .section-title span {
@@ -849,6 +850,7 @@ font-size:2rem;
 }
 
 .cta{
+    height: 100vh;
     position: relative;
     overflow: hidden;
     padding: 120px 0;

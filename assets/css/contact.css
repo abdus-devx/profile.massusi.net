@@ -1,0 +1,388 @@
+:root {
+    --primary: #1d4ed8;
+    --primary-light: #3b82f6;
+    --primary-dark: #1e3a8a;
+    --accent: #06b6d4;
+    --bg: #f8fbff;
+    --bg-secondary: #eef6ff;
+    --text: #0f172a;
+    --text-light: #475569;
+    --border: #dbeafe;
+    --shadow: 0 10px 40px rgba(29,78,216,.10);
+    --error: #ef4444;
+}
+
+/* Base & Typography */
+.cph-contact-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--text);
+}
+
+.cph-contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.cph-contact-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+.cph-contact-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text);
+}
+
+.cph-contact-desc {
+    font-size: 1.125rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Layout Wrapper */
+.cph-contact-wrapper {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* Left Card - Info */
+.cph-contact-info-card {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.cph-contact-info-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.cph-contact-info-desc {
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.cph-contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+    flex-grow: 1;
+}
+
+.cph-contact-info-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.cph-contact-info-icon {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.cph-contact-info-item strong {
+    display: block;
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.cph-contact-info-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+/* Right Card - Form */
+.cph-contact-form-card {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+.cph-contact-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Floating Label Inputs */
+.cph-contact-group {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.cph-contact-input-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: var(--text-light);
+    transition: color 0.3s ease;
+    pointer-events: none;
+}
+
+.cph-contact-group-textarea .cph-contact-input-icon {
+    top: 24px;
+    transform: none;
+}
+
+.cph-contact-input {
+    width: 100%;
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 16px 8px 48px;
+    font-size: 1rem;
+    color: var(--text);
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.cph-contact-group-textarea .cph-contact-input {
+    padding-top: 32px;
+    resize: vertical;
+}
+
+.cph-contact-label {
+    position: absolute;
+    left: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.cph-contact-group-textarea .cph-contact-label {
+    top: 26px;
+    transform: none;
+}
+
+/* Floating Animation States */
+.cph-contact-input:focus ~ .cph-contact-label,
+.cph-contact-input.is-filled ~ .cph-contact-label {
+    top: 8px;
+    font-size: 0.75rem;
+    color: var(--primary);
+    transform: translateY(0);
+}
+
+.cph-contact-group-textarea .cph-contact-input:focus ~ .cph-contact-label,
+.cph-contact-group-textarea .cph-contact-input.is-filled ~ .cph-contact-label {
+    top: 10px;
+}
+
+.cph-contact-input:focus ~ .cph-contact-input-icon {
+    color: var(--primary);
+}
+
+.cph-contact-input:focus {
+    border-color: var(--primary);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.12);
+}
+
+/* Select specific fix for floating label */
+.cph-contact-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+}
+
+/* Validation Styles */
+.cph-contact-error-text {
+    display: none;
+    color: var(--error);
+    font-size: 0.75rem;
+    margin-top: 4px;
+    padding-left: 16px;
+}
+
+.cph-contact-input.is-invalid {
+    border-color: var(--error);
+}
+
+.cph-contact-input.is-invalid ~ .cph-contact-error-text {
+    display: block;
+}
+
+/* Buttons */
+.cph-contact-btn {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
+}
+
+.cph-contact-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(29, 78, 216, 0.3);
+}
+
+.cph-contact-btn:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.cph-contact-btn-icon {
+    width: 20px;
+    height: 20px;
+    color: #ffffff;
+}
+
+.cph-contact-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cph-contact-btn-outline:hover {
+    border-color: var(--primary);
+    background-color: var(--bg-secondary);
+}
+
+/* Loading Spinner */
+.cph-contact-spin {
+    animation: cph-contact-spin-anim 1s linear infinite;
+}
+
+@keyframes cph-contact-spin-anim {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Modal */
+.cph-contact-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.cph-contact-modal-overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cph-contact-modal-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.cph-contact-modal-overlay.is-active .cph-contact-modal-box {
+    transform: translateY(0);
+}
+
+.cph-contact-modal-icon {
+    width: 56px;
+    height: 56px;
+    color: var(--primary);
+    margin: 0 auto 16px auto;
+}
+
+.cph-contact-modal-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.cph-contact-modal-desc {
+    color: var(--text-light);
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.cph-contact-modal-redirect {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 24px;
+}
+
+#cph-contact-countdown {
+    font-size: 1.25rem;
+    color: var(--primary);
+}
+
+.cph-contact-btn-manual {
+    display: none; /* Muncul jika redirect terblokir */
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .cph-contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .cph-contact-grid-2 {
+        grid-template-columns: 1fr;
+    }
+    .cph-contact-info-card {
+        padding: 30px;
+    }
+    .cph-contact-form-card {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cph-contact-section {
+        padding: 60px 16px;
+    }
+}
