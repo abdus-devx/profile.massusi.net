@@ -37,6 +37,7 @@ body {
 .container {
     width: min(1280px, 92%);
     margin: auto;
+    height: 100%;
 }
 
 .title {
@@ -877,7 +878,18 @@ font-size:2rem;
     justify-content: center;
     margin-top: 30px;
 }
-
+.cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.cta-wrapper h2 {
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.1;
+    margin: 20px 0;
+}
 @media(max-width:900px) {
 
     .hero-grid,
